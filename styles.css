@@ -1,37 +1,56 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-image: url('wallpaper4.png'); /* Replace with the URL of the IIT Kharagpur photo */
-    background-size: cover;
-    background-position: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    text-align:center;
 }
 
-.countdown {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
+.container{
+    width:90%;
+    max-width:600px;
 }
 
-#timer {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.countdown h1{
+    font-size:2rem;
+    margin-bottom:20px;
 }
 
-#timer div {
-    background: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.5em;
-    font-weight: bold;
+#timer{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+#timer div{
+    flex:1;
+    min-width:120px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    font-size:1.5rem;
+}
+
+/* Mobile optimization */
+@media (max-width:600px){
+
+    .countdown h1{
+        font-size:1.5rem;
+    }
+
+    #timer div{
+        font-size:1.2rem;
+        padding:15px;
+    }
+
 }
