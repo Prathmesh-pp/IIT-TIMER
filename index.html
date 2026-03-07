@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IIT Countdown</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="countdown">
-            <h1>Countdown to IIT Goal</h1>
-            <div id="timer">
-                <div id="days"></div>
-                <div id="hours"></div>
-                <div id="minutes"></div>
-                <div id="seconds"></div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        function updateCountdown() {
-            const targetDate = new Date("2026-05-17T00:00:00");
-            const now = new Date();
-            const diff = targetDate - now;
+<div class="container">
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+<h1 class="title">IIT ADVANCED 2026</h1>
+<p class="subtitle">Your Dream. Your Fight. Your Countdown.</p>
 
-            document.getElementById('days').innerText = `${days} Days`;
-            document.getElementById('hours').innerText = `${hours} Hours`;
-            document.getElementById('minutes').innerText = `${minutes} Minutes`;
-            document.getElementById('seconds').innerText = `${seconds} Seconds`;
-        }
+<div id="timer">
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
+<div class="box">
+<h2 id="days">0</h2>
+<span>Days</span>
+</div>
+
+<div class="box">
+<h2 id="hours">0</h2>
+<span>Hours</span>
+</div>
+
+<div class="box">
+<h2 id="minutes">0</h2>
+<span>Minutes</span>
+</div>
+
+<div class="box">
+<h2 id="seconds">0</h2>
+<span>Seconds</span>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function updateCountdown(){
+
+const targetDate = new Date("2026-05-17T00:00:00");
+const now = new Date();
+const diff = targetDate - now;
+
+const days = Math.floor(diff / (1000*60*60*24));
+const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+const seconds = Math.floor((diff % (1000*60)) / 1000);
+
+document.getElementById("days").innerText = days;
+document.getElementById("hours").innerText = hours;
+document.getElementById("minutes").innerText = minutes;
+document.getElementById("seconds").innerText = seconds;
+
+}
+
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+</script>
+
 </body>
 </html>
-
